@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathshala Quiz</title>
+    <link rel="stylesheet" href="mathshala.css">
+</head>
+<body>
+    <h1> Welcome to Mathshala 📚</h1>
+    <hr><hr>
+
+    <section class="intro">
+        <h2>Why Mathshala?</h2>
+        <h3>Mathematics and formulas are the foundation of logical thinking, problem-solving, and innovation...<br>
+        Stuck on math formulas? We got you! Just type what you need, and boom—answers at your fingertips!</h3>
+    </section>
+
+    <section class="quiz-container">
+        <h2>Take a Quick Math Quiz</h2>
+        <label for="class-select">Choose your class:</label>
+        <select id="class-select">
+            <option value="" disabled selected>Select class</option>
+            <option value="1">Class 1</option>
+            <option value="2">Class 2</option>
+            <option value="3">Class 3</option>
+            <option value="4">Class 4</option>
+            <option value="5">Class 5</option>
+            <option value="6">Class 6</option>
+            <option value="7">Class 7</option>
+            <option value="8">Class 8</option>
+            <option value="9">Class 9</option>
+            <option value="7">Number System</option>
+            <option value="8">Algebra</option>
+            <option value="9">Geometry</option>
+            <option value="9">Trigonometry</option>
+          </select>
+        <button id="startBtn">Start Quiz</button>
+    </section>
+    <button class="help-btn" onclick="toggleHelp()">Need Help?</button>
+
+    <div id="helpBox" class="help-box" style="display: none;">
+        <h2>Need Help? 👩‍🚀</h2>
+        <p>Welcome to <strong>Mathshala</strong>! Here's how to use this quiz:</p>
+        <ul>
+            <li>🧠 Select your class level and click <strong>Start Quiz</strong>.</li>
+            <li>📚 Read each question carefully and pick the right option.</li>
+            <li>🚀 Click <strong>Submit Quiz</strong> when done to see your score!</li>
+            <li>💡 Try to answer all 10 questions for best results.</li>
+        </ul>
+        <button onclick="toggleHelp()">Close</button>
+    </div>
+      <script>
+        function toggleHelp() {
+            const helpBox = document.getElementById('helpBox');
+            helpBox.style.display = (helpBox.style.display === 'none' || helpBox.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+  <script src="mathshala.js"></script>
+  <script src="questions.js"></script>
+</body>
+</html>
