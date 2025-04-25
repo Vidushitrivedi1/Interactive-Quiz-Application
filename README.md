@@ -68,4 +68,15 @@ Can be used for homework practice, math drills, or timed quizzes in classrooms.
 
 Encourages self-paced learning with an engaging UI for digital learners.
 
+output:
+
+![Image](https://github.com/user-attachments/assets/bd6adbc7-979e-4c74-9c63-4396186e0d9b)
+
+![Image](https://github.com/user-attachments/assets/0496518e-f38a-4ea6-bdaf-79625239961a)
+![Image](https://github.com/user-attachments/assets/5d990a43-c8a6-400c-9e60-6f17cf30856c)
+![Image](https://github.com/user-attachments/assets/8a74ee18-fa9a-4bcb-a401-575f0af42f97)
+![Image](https://github.com/user-attachments/assets/f8267629-7d71-4eb6-831d-cb073ac1d5fe)
+![Image](https://github.com/user-attachments/assets/b66545ca-3215-4566-bbc4-e1f81dcaaaf7)
+![Image](https://github.com/user-attachments/assets/fc2ad0b6-1398-4e26-a4f6-9ccd3f133c02)
+
 
