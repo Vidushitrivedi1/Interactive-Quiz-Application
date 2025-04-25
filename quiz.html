@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathshala Quiz</title>
+    <link rel="stylesheet" href="mathshala.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Mathshala Quiz Time 🎯</h1>
+
+    <main class="quiz-container">
+        <div id="quizSection"></div>
+        <div id="result"></div>
+    </main>
+
+    <button class="help-btn" onclick="toggleHelp()">Need Help?</button>
+    <div id="helpBox" class="help-box" style="display: none;">
+        <h2>Need Help? 👩‍🚀</h2>
+        <p>Welcome to <strong>Mathshala</strong>! Here's how to use this quiz:</p>
+        <ul>
+            <li>🧠 Select your class level on the homepage and click <strong>Start Quiz</strong>.</li>
+            <li>📚 Read each question carefully and select the best answer.</li>
+            <li>🛰 Click <strong>Submit Quiz</strong> when done to see your score!</li>
+            <li>💡 Make sure you attempt all questions before submitting.</li>
+        </ul>
+        <button onclick="toggleHelp()">Close</button>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="mathshala.js"></script>
+    <script>
+        function toggleHelp() {
+            const helpBox = document.getElementById('helpBox');
+            helpBox.style.display = (helpBox.style.display === 'none' || helpBox.style.display === '') ? 'block' : 'none';
+        }
+
+        function submitQuiz() {
+            const quizContainer = document.getElementById("quizSection");
+            const resultContainer = document.getElementById("result");
+            let score = 0;
+
+            const questionElements = quizContainer.querySelectorAll(".question");
+
+            questionElements.forEach((qEl, index) => {
+                const selected = qEl.querySelector("input[type='radio']:checked");
+                const correctAnswer = qEl.dataset.answer;
+
+                if (selected) {
+                    const userAnswer = selected.value;
+                    const label = selected.parentElement;
+
+                    if (userAnswer === correctAnswer) {
+                        score++;
+                        label.style.color = "lightgreen";
+                    } else {
+                        label.style.color = "red";
+                        const options = qEl.querySelectorAll("label");
+                        options.forEach(opt => {
+                            if (opt.querySelector("input").value === correctAnswer) {
+                                opt.style.color = "lightgreen";
+                            }
+                        });
+                    }
+                } else {
+                    const options = qEl.querySelectorAll("label");
+                    options.forEach(opt => {
+                        if (opt.querySelector("input").value === correctAnswer) {
+                            opt.style.color = "lightgreen";
+                        }
+                    });
+                }
+            });
+
+            resultContainer.innerHTML = `<h2>Your Score: ${score} / ${questionElements.length}</h2>`;
+        }
+    </script>
+</body>
+</html>
+
