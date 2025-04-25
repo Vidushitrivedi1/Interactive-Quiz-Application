@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+    background: url('https://images.app.goo.gl/FyZQhJgxPrHH7Emx7') no-repeat center center fixed;
+    background-size: cover;
+    color: #023047;
+    font-family: 'Orbitron', sans-serif;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+    backdrop-filter: brightness(0.8);
+}
+
+h1, h2, h3 {
+    color: #023047;
+    text-shadow: 0 0 8px rgba(182, 231, 255, 0.3);
+}
+
+button, select {
+    background-color: rgba(0, 0, 30, 0.8);
+    color: #b6e7ff;
+    border: 2px solid #b6e7ff;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+button:hover, select:hover {
+    background-color: rgba(10, 20, 50, 0.9);
+    box-shadow: 0 0 10px #b6e7ff;
+}
+
+.quiz-container {
+    margin-top: 40px;
+    background-color: rgba(0, 0, 20, 0.7);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(200, 250, 255, 0.1);
+}
+
+.quiz-question {
+    color: #b6e7ff;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-in;
+    margin-bottom: 20px;
+}
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+        }   
+label {
+    display: block;
+    margin: 5px 0;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.help-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 30, 0.8);
+    border: 2px solid #b6e7ff;
+    color: #023047;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px #b6e7ff;
+    font-weight: bold;
+}
+
+.help-btn:hover {
+    background-color: rgba(129, 129, 205, 0.9);
+    color: #b6e7ff;
+
+}
+.help-box {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: rgba(15, 15, 30, 0.95);
+    color: #b2fefa;
+    border: 2px solid #38fdd9;
+    padding: 20px;
+    width: 280px;
+    border-radius: 10px;
+    z-index: 1000;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 0 20px rgba(56, 253, 217, 0.5);
+}
+
+.help-box h2 {
+    margin-top: 0;
+    color: #00ffe0;
+}
+
+.help-box ul {
+    padding-left: 20px;
+}
+
+.help-box button {
+    background-color: #0a0a1a;
+    color: #00ffe0;
+    border: 1px solid #00ffe0;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.stars {
+    font-size: 2em;
+    margin-top: 10px;
+    color: gold;
+}
